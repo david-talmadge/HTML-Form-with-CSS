@@ -16,8 +16,8 @@
         resultsList.append(`${firstname} is your ${lastname}`);
         resultsList.append(document.createElement('br'));
       });
-      new URLSearchParams(window.location.search).forEach((fileUpload)=>{
-        resultsList.append(`${fileUpload} is your ${fileUpload}`);
+      new URLSearchParams(window.location.search).get((fileUpload)=>{
+        resultsList.append(fileUpload);
         resultsList.append(document.createElement('br'));
       });
     </script>
