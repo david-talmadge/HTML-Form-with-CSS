@@ -17,7 +17,7 @@ h2, h3 {
   /*color:#ffdfad;*/
   text-shadow: 1px 1px 1px #361701;
   font-style:oblique;
-/*font-size:30px; */
+/*font-size:20px; */
 }
 p {
   /*color:#361701;*/
@@ -123,6 +123,19 @@ legend, fieldset {
 .a19{
   grid-column: 1;
   grid-row: 18;
+}
+
+.resultsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  padding: 4px;
+  place-items: center;
+  gap: 10px;
+}
+.centeredResults{
+  grid-column: 2;
+  grid-row: 2;
 }
 div {
   /*border: double cornflowerblue;*/
