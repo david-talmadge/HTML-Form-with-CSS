@@ -14,17 +14,25 @@
       const resultsList = document.getElementById('results');
       new URLSearchParams(window.location.search).forEach((firstname, lastname, name, password, age, date, phoneNumber, winter, summer, userName, preference, faveDay, opinion, webUrl, faveColor)=>{
         resultsList.append(`${firstname} is your ${lastname}`);
+        resultsList.append(document.createElement('br'));
         resultsList.append(`${name} is your ${age}`);
+        resultsList.append(document.createElement('br'));
         resultsList.append(`${date} is your ${phoneNumber}`);
+        resultsList.append(document.createElement('br'));
         if(winter==="on"){
           resultsList.append(`Your favorite season is ${winter}`);
+          resultsList.append(document.createElement('br'));
         }
         if(summer==="on"){
           resultsList.append(`Your favorite season is ${summer}`);
+          resultsList.append(document.createElement('br'));
         }
         resultsList.append(`${userName} is your ${userName}`);
+        resultsList.append(document.createElement('br'));
         resultsList.append(`${preference} is your favorite between day and night`);
+        resultsList.append(document.createElement('br'));
         resultsList.append(`${faveDay} is your favorite ${faveColor}`);
+        resultsList.append(document.createElement('br'));
         resultsList.append(`${opinion} is your ${webUrl}`);
         resultsList.append(document.createElement('br'));
       });
