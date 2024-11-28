@@ -12,17 +12,24 @@
     <a href="index.html">Back to Form</a>
     <script>
       const resultsList = document.getElementById('results');
-      new URLSearchParams(window.location.search).forEach((firstname, lastname, name, password, age, date, phoneNumber, userName, preference, faveDay, opinion, webUrl)=>{
+      new URLSearchParams(window.location.search).forEach((firstname, lastname, name, password, age, date, phoneNumber, winter, summer, userName, preference, faveDay, opinion, webUrl, faveColor)=>{
         resultsList.append(`${firstname} is your ${lastname}`);
         resultsList.append(`${name} is your ${password}`);
         resultsList.append(`${age} is your age`);
         resultsList.append(`${date} is your birthdate`);
         resultsList.append(`${phoneNumber} is your phone number`);
+        if(winter){
+          resultsList.append(`Your favorite season is winter`);
+        }
+        if(summer){
+          resultsList.append(`Your favorite season is summer`);
+        }
         resultsList.append(`${userName} is your username`);
         resultsList.append(`${preference} is your favorite between day and night`);
         resultsList.append(`${faveDay} is your favorite day of the week`);
         resultsList.append(`Your opinion is: ${opinion}`);
-        resultsList.append(`${webUrl} is your your web url`);
+        resultsList.append(`${webUrl} is your web url`);
+        resultsList.append(`${faveColor} is your favorite color`);
         resultsList.append(document.createElement('br'));
       });
     </script>
