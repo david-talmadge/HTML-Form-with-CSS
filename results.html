@@ -12,7 +12,7 @@
     <a href="index.html">Back to Form</a>
     <script>
       const resultsList = document.getElementById('results');
-      new URLSearchParams(window.location.search).forEach((firstname, lastname, name, password, age, date, phoneNumber, winter, summer, userName, preference, faveDay, opinion, webUrl, faveColor)=>{
+      new URLSearchParams(window.location.search).forEach((firstname, lastname, email, password, age, date, phoneNumber, winter, summer, userName, preference, faveDay, opinion, webUrl, faveColor)=>{
         resultsList.append(`${firstname} is your ${lastname}`);
         resultsList.append(document.createElement('br'));
       });
