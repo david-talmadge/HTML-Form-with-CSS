@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit-no">
+    <meta name="author" content="David Talmadge">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Results</title>
+  </head>
+  <body>
+    <div id="results"></div>
+    <a href="index.html">Back to Form</a>
+    <script>
+      const resultsList = document.getElementById('results');
+      new URLSearchParams(window.location.search).forEach((firstname, lastname)=>{
+        resultsList.append(`${firstname} is the ${lastname}`);
+        resultsList.append(document.createElement('br'));
+      });
+    </script>
+  </body>
+</html>
